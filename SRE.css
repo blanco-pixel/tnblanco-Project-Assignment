@@ -16,12 +16,12 @@ body {
   color: var(--text-color);
   background-color: #fcfafa;
   line-height: 1.6;
-  text-align: center;
+  text-align: center; 
 }
 
 
 header {
-  background-color: #b45c73;
+  background-color: #d997a9;
   color: #fcfafa;
   padding: 20px;
   text-align: center;
@@ -40,7 +40,7 @@ header h1 {
 nav {
   display: flex;
   justify-content: center;
-  background-color: var(--secondary-color);
+  background-color: #b45c73;
   padding: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -48,7 +48,33 @@ nav {
   padding: 10px;
 }
 
+.nav-underline {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 
+.nav-underline a {
+  position: relative;
+  text-decoration: none;
+  color: #130d0f;
+  padding-bottom: 5px;
+}
+
+.nav-underline a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #b45c73;
+  transition: 0.3s;
+}
+
+.nav-underline a:hover::after {
+  width: 100%;
+}
 
 nav a {
   color: var(--text-color);
@@ -100,6 +126,99 @@ footer {
   height: auto;
   align-self: flex-start;
   margin-left: 10px;
+}
+
+form {
+  width: 60%;
+  max-width: 30em;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 10em 1fr;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: .5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: .7em 1em;
+  background-color: #b45c73;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form input,
+  form textarea {
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+
+
+.about-section,
+.leadership,
+.service-times {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+.service-times {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.leadership {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.leader-photo {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  align-items: center
+}
+
+.leader-text h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.service-table th,
+.service-table td {
+  border: 1px solid #d66b87;
+  padding: 10px;
+}
+
+.service-table th {
+  background-color: #b45c73;
+  color: #fcfafa;
+  text-align: left;
+}
+
+.service-table tr:nth-child(even) {
+  background-color: #f7e3ea;
 }
 
 }

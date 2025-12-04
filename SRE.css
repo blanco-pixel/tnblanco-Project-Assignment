@@ -19,7 +19,28 @@ body {
   text-align: center; 
 }
 
+.header-inner {
+  display: flex;
+  align-items: center;       /* vertically align logo + title */
+  justify-content: center;   /* centers the title horizontally */
+  width: 100%;
+  position: relative;
+}
 
+.header-inner .logo {       /*what ChatGPT helped with my logo issues*/
+  width: 80px;
+  height: auto;
+  position: absolute;
+  left: 10px;                /* far left */
+  bottom: 10px;                  /* lowers or raises the logo — adjust if needed */
+}
+
+header h1 {
+  margin: 0;
+  padding: 5px 0;
+  flex: 1;                   /* allows the title to stay centered */
+  text-align: center;        /* ensures title is centered */
+}
 header {
   background-color: #d997a9;
   color: #fcfafa;
@@ -216,6 +237,29 @@ form input,
   color: #fcfafa;
   text-align: left;
 }
+
+.service-table tr:nth-child(even) {
+  background-color: #f7e3ea;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 
 .service-table tr:nth-child(even) {
   background-color: #f7e3ea;
